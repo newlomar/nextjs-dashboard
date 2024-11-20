@@ -10,6 +10,8 @@ const FormSchema = z.object({
   date: z.string(),
 });
 
+const CreateInvoice = FormSchema.omit({ id: true, date: true });
+
 export async function createInvoice(formData: FormData) {
   const rawFormData = {
     customerId: formData.get("customerId"),
