@@ -50,6 +50,6 @@ export async function updateInvoice(id: string, formData: FormData) {
     WHERE id = ${id}
   `;
 
-  revalidatePath("/dashboard/invoices");
+  expirePath("/dashboard/invoices");
   redirect("/dashboard/invoices");
 }
