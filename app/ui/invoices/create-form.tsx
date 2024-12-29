@@ -129,7 +129,6 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               </p>
             ))}
         </div>
-
         <div id="missing-fields-error" aria-live="polite" aria-atomic="true">
           {state.errors && (
             <p className="mt-2 text-sm text-red-500">{state.message}</p>
