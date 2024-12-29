@@ -45,8 +45,8 @@ export async function createInvoice(prevState: State, formData: FormData) {
       message: "Missing Fields. Failed to Create Invoice.",
     };
   }
-
-  const amountInCents = amount * 100;
+  console.log(validatedFields);
+  const amountInCents = validatedFields.data.amount * 100;
   const date = new Date().toISOString().split("T")[0];
 
   try {
